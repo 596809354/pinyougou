@@ -5,14 +5,17 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.pinyougou.pojo.TbBrand;
 
 import com.pinyougou.sellergoods.service.BrandService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 
-@RequestMapping("/brand")
-@Controller
 //组合了@ResponseBody 和 @Controller ；对类中的所有方法生效
+
+@RestController
+@RequestMapping("/brand")
 public class BrandController {
 
 

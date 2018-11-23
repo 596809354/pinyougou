@@ -9,14 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 //暴露服务，也就是将该服务注册到注册中心;并在ioc中存在该对象
-@Service(interfaceClass = BrandService.class)
+@Service( interfaceClass = BrandService.class)
 public class BrandServiceImpl implements BrandService {
 
     @Autowired
     private BrandMapper brandMapper;
 
-    @Override
+
     public List<TbBrand> queryAll() {
+
         return brandMapper.queryAll();
     }
 }
